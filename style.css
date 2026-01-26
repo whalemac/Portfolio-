@@ -1,0 +1,421 @@
+/* ==========================================
+   PORTFOLIO WEBSITE - CUSTOM CSS
+   File: css/style.css
+   ========================================== */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling using CSS only */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+.navbar {
+    background-color: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: #b0b0b0 !important;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #4a9eff !important;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+    /* Background image setup */
+    background-image: url('assets/images/profile.jpg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for better text readability */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.85) 50%, rgba(26, 26, 46, 0.7) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* CSS Animation for fade-in */
+    animation: fadeInUp 1s ease-out;
+    max-width: 600px;
+}
+
+.hero-greeting {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+.hero-name {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fff 0%, #4a9eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-title {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none !important;
+}
+
+.social-icon:hover {
+    color: #fff;
+    background: #4a9eff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(74, 158, 255, 0.3);
+    border-color: #4a9eff;
+}
+
+/* Hide the image container since we're using background */
+.hero-image-container {
+    display: none;
+}
+
+.hero-image {
+    display: none;
+}
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
+.about-section {
+    padding: 100px 0;
+    background-color: #0f0f0f;
+    background-image: url('assets/images/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #4a9eff;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #252545 100%);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    /* CSS Animation */
+    animation: fadeIn 1s ease-out;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: #d0d0d0;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   SKILLS SECTION
+   ========================================== */
+.skills-section {
+    padding: 100px 0;
+    background-color: #1a1a1a;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #252545 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(74, 158, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(74, 158, 255, 0.2);
+}
+
+.skill-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.skill-description {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   EXPERIENCE SECTION
+   ========================================== */
+.experience-section {
+    padding: 100px 0;
+    background-color: #0f0f0f;
+    background-image: url('assets/images/experience.jpg.');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.experience-section .section-title,
+.experience-section .section-subtitle {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.experience-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #252545 100%);
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #4a9eff;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateX(5px);
+}
+
+.experience-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.experience-meta {
+    color: #4a9eff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-description {
+    color: #d0d0d0;
+    line-height: 1.7;
+}
+
+
+
+/* ==========================================
+   PROJECTS SECTION
+   ========================================== */
+.projects-section {
+    padding: 100px 0;
+    background-color: #0f0f0f;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #252545 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(74, 158, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(74, 158, 255, 0.2);
+}
+
+.project-image-placeholder {
+    height: 250px;
+    background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1rem;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+    padding-right: 1rem;
+}
+
+.project-github {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    transition: all 0.3s ease;
+}
+
+.project-github:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.project-description {
+    color: #d0d0d0;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    background-color: #0a0a0a;
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer p {
+    color: #666;
+    margin: 0;
+}
+
+/* ==========================================
+   CSS ANIMATIONS (Replaces JavaScript)
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        padding: 2rem;
+    }
+
+    .nav-link {
+        margin: 0.5rem 0;
+    }
+}
