@@ -232,7 +232,7 @@ body {
 .experience-section {
     padding: 100px 0;
     background-color: #0f0f0f;
-    background-image: url('assets/images/experience.jpg.');
+    background-image: url('assets/images/experience.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
